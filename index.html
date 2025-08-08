@@ -326,10 +326,18 @@
             margin-bottom: 4rem;
             color: white;
         }
+        .contact-hero h1 {
+                margin-bottom: 1rem;
+         }
+
+        .contact-hero p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
 
         .contact-hero h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 1s ease forwards;
         }
@@ -343,7 +351,7 @@
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr; /*changes made here*/
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
             margin-bottom: 4rem;
         }
@@ -467,6 +475,58 @@
             transform: translateY(-3px);
         }
 
+        /* 🔥 Animated Banner Styles with Stars */
+        .animated-banner {
+            position: relative;
+            background: linear-gradient(135deg, #667eea, #764ba2, #6b73ff);
+            padding: 100px 20px;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .animated-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            animation: slideInDown 1.5s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        .animated-banner p {
+            font-size: 1.4rem;
+            animation: fadeIn 2.5s ease-in;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Star layer */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: transparent url('https://raw.githubusercontent.com/kognise/water.css/master/static/starfield.png') repeat;
+            animation: moveStars 60s linear infinite;
+            opacity: 0.15;
+            z-index: 0;
+            transform: scale(1.5);
+            pointer-events: none;
+        }
+
+        /* Animation for stars */
+        @keyframes moveStars {
+            from {
+                transform: translate(0, 0) scale(1.5);
+            }
+            to {
+                transform: translate(-50%, -50%) scale(1.5);
+            }
+        }
+
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -571,6 +631,16 @@
     </header>
 
     <main>
+        <!-- 🔥 Animated Banner Section -->
+                <section class="animated-banner">
+                 <div class="stars"></div> <!-- 🌟 Stars background -->
+                 <div class="container">
+                        <h1>Welcome to My World of Code</h1>
+                         <p>Crafting Elegant Interfaces and Powerful Solutions with Java, Python & React</p>
+                 </div>
+                </section>
+
+
         <!-- Home Section -->
         <section id="home" class="hero-section">
             <div class="container">
@@ -592,7 +662,7 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>I'm a budding software engineer with a strong foundation in HTML, Java, and Python. I'm passionate about creating intelligent, user-friendly digital solutions that have a tangible, real-world impact. I love turning complex problems into simple, elegant solutions.</p>
+                        <p>I'm a budding software engineer with With a strong foundation in Java and Python. I'm passionate about building smart, user-friendly digital solutions that make a real-world impact. I love turning complex problems into simple, elegant solutions.</p>
                         <p>I'm a confident, creative thinker who thrives in collaborative environments. With strong leadership qualities and a cheerful, extroverted personality, I find it easy to connect with people and work effectively in diverse teams. Whether I'm solving technical challenges or brainstorming new ideas, I bring energy, curiosity, and a drive to keep learning.</p>
                         
                         <div class="skills">
@@ -612,7 +682,7 @@
                     <div class="about-image">
                         <div class="image-placeholder">
                             <div class="profile-icon"> 
-                            <img src="https://raw.githubusercontent.com/shriidinkar/shriyadinkar.github.io/main/images/9700_4_04.jpg" alt="description of imagealt="Shriya Dinkar" style="width: 250px; border-radius: 50%;"> </div>
+                            <<img src="https://github.com/shriidinkar/shriyadinkar.github.io/blob/main/img.jpg" alt="description of imagealt="Shriya Dinkar" style="width: 250px; border-radius: 50%;"> </div>
                         </div>
                     </div>
                 </div>
@@ -670,12 +740,12 @@
         <section id="contact" class="contact-section">
             <div class="container">
                 <section class="contact-hero">
-                    <div style="padding-bottom: 20px;">
-                        <h1>Get In Touch</h1>
-                    </div>
-                    <p>I'd love to hear from you. Let's start a conversation!</p>
+                    <h1 style="margin-bottom: 1rem;">Let's Connect</h1>
+                        <p style="max-width: 600px; margin: 0 auto 2rem; line-height: 1.6;">
+                            Have a question, idea, or opportunity? I’m always excited to collaborate, chat, or just say hi!
+                          </p>
                 </section>
-
+                
                 <div class="contact-grid">
                     <div class="contact-form">
                         <h2 style="margin-bottom: 1.5rem; color: #333;">Send a Message</h2>
